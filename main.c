@@ -6,7 +6,7 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:24:11 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/07 17:24:59 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/07 18:18:51 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	main(void)
 {
-	ft_printf("Oi");
+	ft_printf("A primeira letra do meu nome é %c\n", 4, 5, 6);
 }
