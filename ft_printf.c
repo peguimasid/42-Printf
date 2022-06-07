@@ -6,7 +6,7 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:18:50 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/07 19:07:55 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/07 19:25:56 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,36 @@ int	format_match(va_list args, char match)
 
 	result = 0;
 	if (match == 'c')
-		ft_putchar(va_arg(args, int));
+		result += ft_putchar(va_arg(args, int));
+	// if(match == 's')
+	// if(match == 'p')
+	// if(match == 'd')
+	// if(match == 'i')
+	// if(match == 'u')
+	// if(match == 'x')
+	// if(match == 'X')
+	if (match == '%')
+		result += ft_putchar('%');
 	return (result);
 }
 
 int	ft_printf(const char *s, ...)
 {
+	int		result;
 	va_list	args;
-	int		len_printed;
 	int		i;
 
-	len_printed = 0;
+	result = 0;
 	i = 0;
 	va_start(args, s);
 	while (s[i])
 	{
 		if (s[i] == '%')
-			len_printed += format_match(args, s[++i]);
+			result += format_match(args, s[++i]);
 		else
-			len_printed += ft_putchar(s[i]);
+			result += ft_putchar(s[i]);
 		i++;
 	}
 	va_end(args);
-	return (len_printed);
+	return (result);
 }
