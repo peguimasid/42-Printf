@@ -1,0 +1,1 @@
+make -s && cc main.c ./libftprintf.a && ./a.out && rm ./a.out && make -s fclean

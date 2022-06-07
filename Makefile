@@ -6,7 +6,7 @@
 #    By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 16:42:45 by gmasid            #+#    #+#              #
-#    Updated: 2022/06/07 16:55:50 by gmasid           ###   ########.fr        #
+#    Updated: 2022/06/07 19:04:38 by gmasid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,8 @@ SRCS	= ft_printf.c	\
 
 OBJS	= $(SRCS:.c=.o)
 
-CFLAGS	= -Wall -Wextra -Werror -I
-
 .c.o:
-		cc $(CFLAGS) include -c $< -o $(<:.c=.o)
+		cc -Wall -Wextra -Werror -I include -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
 			cd ./libft && make && cp -v libft.a ../${NAME}

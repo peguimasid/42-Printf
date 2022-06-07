@@ -6,20 +6,39 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:18:50 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/07 18:19:20 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/07 19:07:55 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
-int	ft_printf(const char *format, ...)
+int	format_match(va_list args, char match)
 {
-	va_list	list;
+	int	result;
 
-	va_start(list, format);
-	for (int i = 0; i < 3; i++)
-		printf("%d\n", va_arg(list, int));
-	va_end(list);
-	return (0);
+	result = 0;
+	if (match == 'c')
+		ft_putchar(va_arg(args, int));
+	return (result);
+}
+
+int	ft_printf(const char *s, ...)
+{
+	va_list	args;
+	int		len_printed;
+	int		i;
+
+	len_printed = 0;
+	i = 0;
+	va_start(args, s);
+	while (s[i])
+	{
+		if (s[i] == '%')
+			len_printed += format_match(args, s[++i]);
+		else
+			len_printed += ft_putchar(s[i]);
+		i++;
+	}
+	va_end(args);
+	return (len_printed);
 }
