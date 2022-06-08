@@ -6,7 +6,7 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:44:56 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/08 14:05:31 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/08 20:50:06 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,9 @@ static char	*generate(char *result, long n, int len)
 
 char	*ft_utoa(unsigned int n)
 {
-	int len;
-	char *result;
+	int		len;
+	char	*result;
+
 	len = get_len(n);
 	result = malloc(sizeof(char) * (len + 1));
 	if (!result)
