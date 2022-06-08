@@ -6,7 +6,7 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:24:11 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/08 12:53:58 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/08 14:09:14 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	main(void)
 
 	len_printed = 0;
 	len_printed = ft_printf("A letra '%c' é a primeira do meu nome\n", 'G');
-	printf("printou %d caracteres", len_printed);
 	len_printed = ft_printf("Minha idade é '%i' anos\n", 19);
-	printf("printou %d caracteres", len_printed);
+	len_printed = ft_printf("Minha idade é '%d' anos\n", 19);
+	len_printed = ft_printf("Minha idade é '%u' anos\n", 4294967280);
+	len_printed = ft_printf("Minha idade é '%u' anos\n", 0);
 }
