@@ -6,7 +6,7 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:18:50 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/07 19:25:56 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/08 13:00:39 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	format_match(va_list args, char match)
 	result = 0;
 	if (match == 'c')
 		result += ft_putchar(va_arg(args, int));
+	if (match == 'i' || match == 'd')
+		result += ft_print_int(va_arg(args, int));
 	// if(match == 's')
 	// if(match == 'p')
-	// if(match == 'd')
-	// if(match == 'i')
 	// if(match == 'u')
 	// if(match == 'x')
 	// if(match == 'X')
