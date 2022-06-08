@@ -6,7 +6,7 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:07:40 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/08 14:19:59 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/08 14:37:58 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,14 @@ int	ft_print_int(int nbr)
 
 int	ft_print_uint(unsigned int n)
 {
-	int		put_len;
+	int		nbr_len;
 	char	*convert;
 
-	put_len = 0;
+	if (n == 0)
+		return (ft_putchar('0'));
+	nbr_len = 0;
 	convert = ft_utoa(n);
-	put_len += ft_print_str(convert);
+	nbr_len += ft_print_str(convert);
 	free(convert);
-	return (put_len);
+	return (nbr_len);
 }
