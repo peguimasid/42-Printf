@@ -6,17 +6,11 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:07:40 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/08 14:08:08 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/08 14:19:59 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_putchar(int c)
-{
-	ft_putchar_fd(c, 1);
-	return (1);
-}
 
 int	ft_print_str(char *str)
 {
@@ -29,10 +23,7 @@ int	ft_print_str(char *str)
 		return (6);
 	}
 	while (str[i] != '\0')
-	{
-		ft_putchar_fd(str[i], 1);
-		i++;
-	}
+		ft_putchar_fd(str[i++], 1);
 	return (i);
 }
 

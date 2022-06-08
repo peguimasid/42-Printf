@@ -6,11 +6,17 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:18:50 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/08 14:00:14 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/08 14:13:09 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_putchar(int c)
+{
+	ft_putchar_fd(c, 1);
+	return (1);
+}
 
 int	format_match(va_list args, char match)
 {
@@ -23,7 +29,8 @@ int	format_match(va_list args, char match)
 		result += ft_print_int(va_arg(args, int));
 	if (match == 'u')
 		result += ft_print_uint(va_arg(args, unsigned int));
-	// if(match == 's')
+	if (match == 's')
+		result += ft_print_str(va_arg(args, char *));
 	// if(match == 'p')
 	// if(match == 'x')
 	// if(match == 'X')
