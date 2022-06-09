@@ -6,7 +6,7 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:24:11 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/09 11:32:36 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/09 13:21:49 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,11 @@ int	main(void)
 
 	ptr = 0;
 	len_printed = 0;
-	len_printed = printf("pointer => '%p'\n", &ptr);
+	ft_printf("/\\/\\/\\/\\/\\/\\/\\/\\\n");
+	len_printed = printf("test or => '%x'\n", 7562);
+	len_printed = printf("test or => '%X'\n", 7562);
 	ft_printf("printou => %d caractéres\n", len_printed);
-	len_printed = ft_printf("pointer => '%p'\n", &ptr);
+	len_printed = ft_printf("test my => '%x'\n", 7562);
+	len_printed = ft_printf("test my => '%X'\n", 7562);
 	ft_printf("printou => %d caractéres\n", len_printed);
 }

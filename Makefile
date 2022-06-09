@@ -6,7 +6,7 @@
 #    By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 16:42:45 by gmasid            #+#    #+#              #
-#    Updated: 2022/06/09 12:05:18 by gmasid           ###   ########.fr        #
+#    Updated: 2022/06/09 12:41:27 by gmasid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME	= libftprintf.a
 SRCS	= ft_printf.c	\
 				ft_printf_utils.c	\
 				ft_print_ptr.c \
-				# ft_printf_hexa.c	\
+				ft_print_hexa.c	\
 
 OBJS	= $(SRCS:.c=.o)
 
