@@ -6,7 +6,7 @@
 /*   By: gmasid <gmasid@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:18:50 by gmasid            #+#    #+#             */
-/*   Updated: 2022/06/08 14:13:09 by gmasid           ###   ########.fr       */
+/*   Updated: 2022/06/09 11:25:47 by gmasid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putchar(int c)
 	return (1);
 }
 
-int	format_match(va_list args, char match)
+int	ft_parse_flag(va_list args, char match)
 {
 	int	result;
 
@@ -51,7 +51,7 @@ int	ft_printf(const char *s, ...)
 	while (s[i])
 	{
 		if (s[i] == '%')
-			result += format_match(args, s[++i]);
+			result += ft_parse_flag(args, s[++i]);
 		else
 			result += ft_putchar(s[i]);
 		i++;
